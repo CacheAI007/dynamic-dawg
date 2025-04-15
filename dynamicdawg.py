@@ -40,14 +40,14 @@ def competitive_dynamic_pricing(base_price, occupancy, demand, competitor_price,
 
 
 # Get user inputs
-print("Enter values for dynamic pricing calculation:")
+#print("Enter values for dynamic pricing calculation:")
 
-base_price = float(input("Base Price of Storage Unit: "))
-occupancy = float(input("Current Occupancy Rate (0 to 1): "))
-demand = float(input("Demand Factor (0 to 1): "))
-competitor_price = competeprice()
-seasonality = float(input("Seasonality Factor (e.g., 1.2 for peak, 0.8 for off-peak): "))
-urgency = float(input("Urgency Factor (0 to 1, where 1 is high urgency): "))
+#base_price = float(input("Base Price of Storage Unit: "))
+#occupancy = float(input("Current Occupancy Rate (0 to 1): "))
+#demand = float(input("Demand Factor (0 to 1): "))
+#competitor_price = competeprice()
+#seasonality = float(input("Seasonality Factor (e.g., 1.2 for peak, 0.8 for off-peak): "))
+#urgency = float(input("Urgency Factor (0 to 1, where 1 is high urgency): "))
 
 # Calculate competitive dynamic price
 final_price = competitive_dynamic_pricing(base_price, occupancy, demand, competitor_price, seasonality, urgency)
