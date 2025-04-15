@@ -3,7 +3,7 @@ from CompetePrice import competeprice
 import subprocess
 
 def dynamicdawg(place,unit_size, base_price, occupancy, demand, seasonality, urgency):
-    #subprocess.run(["python", "Scrape.py"], check=True)
+    subprocess.run(["python", "Scrape.py",place], check=True)
     subprocess.run(["python", "Extract.py"], check=True)
 
     def competitive_dynamic_pricing(base_price, occupancy, demand, competitor_price, seasonality, urgency):
@@ -47,4 +47,4 @@ def dynamicdawg(place,unit_size, base_price, occupancy, demand, seasonality, urg
     # Output results
     print(f"\n Suggested Price: ${final_price}")
     return final_price
-dynamicdawg("San Francisco","5x5", 55, 0, 0, 0.8, 0)
+dynamicdawg("San Bruno, CA","5x5", 55, 0, 0, 0.8, 0)

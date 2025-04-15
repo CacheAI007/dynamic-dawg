@@ -11,6 +11,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from fake_useragent import UserAgent
+import sys
+
+place = sys.argv[1]
 
 from threading import Thread
 
@@ -20,7 +23,7 @@ PROXY = "your_proxy:port"  # Replace with your proxy if needed
 
 # Initialize Chrome Options
 options = Options()
-options.add_argument("--headless")  # Uncomment to run in headless mode (stealthier)
+#options.add_argument("--headless")  # Uncomment to run in headless mode (stealthier)
 options.add_argument("--disable-blink-features=AutomationControlled")  # Hide Selenium detection
 options.add_argument("--incognito")  # Use Incognito Mode
 options.add_argument("--disable-gpu")  # Improve stability
@@ -112,7 +115,7 @@ try:
     # Locate search box and enter query
     search_box = driver.find_element(By.ID, "hero-search")
     search_box.clear()
-    search_box.send_keys("Redwood City, CA")
+    search_box.send_keys(place)
     random_delay(1, 3)
     search_box.send_keys(Keys.RETURN)
     random_delay(5, 8)  # Allow results to load
