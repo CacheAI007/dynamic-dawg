@@ -2,7 +2,7 @@ import pandas as pd
 import subprocess
 file_name = "sorted_storage_unit_price_summary.csv"
 df = pd.read_csv(file_name, header=0)  # Read with headers
-def competeprice():# Load the CSV file
+def competeprice(unit_size):# Load the CSV file
     # Ensure the second price column (Price2) is numeric
     df.iloc[:, 2] = pd.to_numeric(df.iloc[:, 2], errors='coerce')
 
@@ -20,7 +20,7 @@ def competeprice():# Load the CSV file
     unit_areas = {row["Size"]: get_area(row["Size"]) for _, row in df.iterrows()}
 
     # Get user input
-    user_input = input("Enter the storage unit size (e.g., 3x4): ").strip().replace("'", "").replace(" ", "x")
+    user_input = unit_size.strip().replace("'", "").replace(" ", "x")
 
     # Compute the area of the requested size
     try:

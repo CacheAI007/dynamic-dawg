@@ -45,7 +45,7 @@ summary_stats.columns = ['Mean', 'Median', 'Mode']
 # # Display statistics
 # print(summary_stats)
 # # Sort by unit size to ensure logical order before saving
-# summary_stats_sorted = summary_stats.sort_values(by="Mean")
+summary_stats_sorted = summary_stats.sort_values(by="Mean")
 
 # Save the sorted summary statistics to a CSV file
 output_file = "sorted_storage_unit_price_summary.csv"
