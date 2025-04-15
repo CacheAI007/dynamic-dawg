@@ -1,4 +1,5 @@
 import pandas as pd
+import subprocess
 file_name = "sorted_storage_unit_price_summary.csv"
 df = pd.read_csv(file_name, header=0)  # Read with headers
 def competeprice():# Load the CSV file

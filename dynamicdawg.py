@@ -1,6 +1,7 @@
 import numpy as np
 from CompetePrice import competeprice
-
+subprocess.run(["python", "Scrape.py"], check=True)
+subprocess.run(["python", "Extract.py"], check=True)
 
 def competitive_dynamic_pricing(base_price, occupancy, demand, competitor_price, seasonality, urgency):
     """

@@ -157,13 +157,13 @@ try:
     banner_thread.join()
 
     # Print results to console
-    print("\n\n📊 Scraped Data:")
-    for row in data[1:]:  # Skip header for display
-        print(f"📦 Name: {row[0]}")
-        print(f"📍 Address: {row[1]}")
-        print(f"📏 Size: {row[2]}")
-        print(f"💲 Price: {row[3]}")
-        print("-" * 50)
+    #print("\n\n📊 Scraped Data:")
+   # for row in data[1:]:  # Skip header for display
+       # print(f"📦 Name: {row[0]}")
+       # print(f"📍 Address: {row[1]}")
+       # print(f"📏 Size: {row[2]}")
+        # print(f"💲 Price: {row[3]}")
+       # print("-" * 50)
 
     # Save raw results to a CSV file
     save_data_to_csv(data[1:])  # Exclude header from CSV writing
